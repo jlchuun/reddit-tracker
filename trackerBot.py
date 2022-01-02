@@ -1,5 +1,6 @@
 from discord.ext import tasks
 
+import config
 import discord
 import requests
 
@@ -40,4 +41,4 @@ class MyClient(discord.Client):
         await channel.send(self.posts)
 
 client = MyClient()
-client.run('OTI1NjI4MTQyMTA4OTM4MjUx.Ycv4Yg.auhwFqJ3i4OEFnYldqJIIPz4r8I')
+client.run('bot-token')
