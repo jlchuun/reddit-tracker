@@ -41,4 +41,4 @@ class MyClient(discord.Client):
         await channel.send(self.posts)
 
 client = MyClient()
-client.run('bot-token')
+client.run(config.bot_token)
