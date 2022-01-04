@@ -34,11 +34,12 @@ class MyClient(discord.Client):
         await self.wait_until_ready()
         channel = self.get_channel(797616940390154294)
         self.posts = []
+        s = '-{0}\n\n-{1}\n\n-{2}\n\n-{3}\n\n-{4}'
+
         r = get_listings(subreddit, listing, limit, timeframe)
         for post in r['data']['children']:
             x = post['data']['title']
             self.posts.append(x)
-        await channel.send(self.posts)
-
+        await channel.send(s.format(*self.posts))
 client = MyClient()
 client.run(config.bot_token)
